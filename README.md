@@ -23,5 +23,9 @@ Then draw contour of hole and press "finish".
 
 For higher resolution change variable ```color_grid_size``` from 300 to 600. Note that it will slow down calculations.
 ## Examples
-![boring](https://github.com/vovaf709/diffraction/blob/master/images/boring.jpg)
-![beautiful](https://github.com/vovaf709/diffraction/blob/master/images/beautiful.jpg) 
+Diffraction on square with no color specified:
+![boring](https://github.com/vovaf709/diffraction/blob/master/images/boring.jpg
+Diffraction on curved rhombus in yellow:
+![yellow](https://github.com/vovaf709/diffraction/blob/master/images/yellow.jpg)
+Diffraction on triangle in fancy style:
+![beautiful](https://github.com/vovaf709/diffraction/blob/master/images/beautiful.jpg)
