@@ -7,7 +7,7 @@ class Application(tkinter.Frame):
     pixel_size = 600
     grid_step = 15
     grid_size = int(pixel_size/grid_step)
-    color_grid_size = 300
+    color_grid_size = 600
     color_grid_step = int(pixel_size/color_grid_size)
 
     def __init__(self, master, color):
