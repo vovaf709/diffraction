@@ -6,6 +6,14 @@ The goal is to calculate integral
 
 for some set of directions **s**.
 
-Hole is approximated by a set of squares. For each square solution is trivial:
+General idea is to approximate hole by a set of squares. For each square solution is trivial:
 
 <img src="http://latex.codecogs.com/gif.latex?E = \int\limits_{-a/2}^{a/2}\int\limits_{-b/2}^{b/2}e^{ik(s_xx + s_yy)}dxdy = ab\frac{\sin{\alpha}}{\alpha}\frac{\sin{\beta}}{\beta}" border="0"/>
+
+Solutions for each square are summarized considering geometric center of hole as point with zero field initial phase.
+
+## Usage
+Red, green, blue, yellow, magneta, cyan and fancy(just try it) colors are availbale. If no color is specified white color will be used.
+```bash
+python3 diffraction.py colorname
+```
