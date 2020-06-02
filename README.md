@@ -16,6 +16,8 @@ Solutions for each square are summarized with regard to phase difference. Note t
 
 ## Usage
 Red, green, blue, yellow, magneta, cyan and **fancy**(just try it) colors are availbale. If no color is specified white color will be used.
+
+Run
 ```bash
 python3 diffraction.py %colorname
 ```
