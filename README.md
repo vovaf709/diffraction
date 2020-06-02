@@ -24,4 +24,4 @@ Then draw contour of hole and press "finish".
 For higher resolution change variable ```color_grid_size``` from 300 to 600. Note that it will slow down calculations.
 ## Examples
 ![boring](https://github.com/vovaf709/diffraction/blob/master/images/boring.jpg)
-![beaituful](https://github.com/vovaf709/diffraction/blob/master/images/beautiful.jpg) 
+![beautiful](https://github.com/vovaf709/diffraction/blob/master/images/beautiful.jpg) 
