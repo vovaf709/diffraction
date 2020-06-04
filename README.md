@@ -10,7 +10,7 @@ General idea is to approximate hole by a set of squares.
 ![grid](https://github.com/vovaf709/diffraction/blob/master/images/grid.jpg)  
 For each square(axb with center at (0, 0)) solution is trivial:
 
-<img src="http://latex.codecogs.com/gif.latex?E = \int\limits_{-a/2}^{a/2}\int\limits_{-b/2}^{b/2}e^{ik(s_xx + s_yy)}dxdy = ab\frac{\sin{\alpha}}{\alpha}\frac{\sin{\beta}}{\beta}, \; \alpha = \frac{1}{2}kas_x, \beta = \frac{1}{2}kbs_y" border="0"/>
+<img src="http://latex.codecogs.com/gif.latex?E = \int\limits_{-a/2}^{a/2}\int\limits_{-b/2}^{b/2}e^{ik(s_xx + s_yy)}dxdy = ab\frac{\sin{\alpha}}{\alpha}\frac{\sin{\beta}}{\beta}, \; \alpha = \frac{1}{2}kas_x,\; \beta = \frac{1}{2}kbs_y" border="0"/>
 
 Solutions for each square are summarized with regard to phase difference. Note that geometric center of hole is considered as point with zero field initial phase.
 
