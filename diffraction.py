@@ -1,6 +1,7 @@
 import tkinter
 import math
 import sys
+import json
 from tqdm import tqdm
 
 class Application(tkinter.Frame):
@@ -12,7 +13,7 @@ class Application(tkinter.Frame):
     color_grid_size = 600
     color_grid_step = int(pixel_size / color_grid_size)
 
-    def __init__(self, master, color):
+    def __init__(self, master, color, matrix):
         tkinter.Frame.__init__(self, master)
         self.color = color
         self.prev_x = -1
@@ -26,8 +27,11 @@ class Application(tkinter.Frame):
         self.points = []
 
         # Hole matrix
-        self.matrix = [[0 for x in range(Application.grid_size)]
-                       for y in range(Application.grid_size)]
+        if matrix is not None:
+            self.matrix = matrix
+        else:
+            self.matrix = [[0 for x in range(Application.grid_size)]
+                           for y in range(Application.grid_size)]
 
         # Diffraction pattern matrix
         self.color_matrix = [[0 for x in range(Application.color_grid_size)]
@@ -275,16 +279,24 @@ if __name__ == "__main__":
     ROOT = tkinter.Tk()
     ROOT.title("diffraction meter")
 
-    colors = ["red", "green", "blue", "yellow", "magneta", "cyan", "fancy"]
-    if (len(sys.argv) > 1):
-        if (sys.argv[1] in colors):
-            color = sys.argv[1]
-        else:
-            raise NameError("Invalid color! Only 'red', 'green', 'blue', 'yellow', 'magneta', 'cyan' and 'fancy' are available.")
-    else:
-        color = "white"
+    # colors = ["red", "green", "blue", "yellow", "magneta", "cyan", "fancy"]
+    # if (len(sys.argv) > 1):
+    #     if (sys.argv[1] in colors):
+    #         color = sys.argv[1]
+    #     else:
+    #         raise NameError("Invalid color! Only 'red', 'green', 'blue', 'yellow', 'magneta', 'cyan' and 'fancy' are available.")
+    # else:
+    #     color = "white"
 
-    APP = Application(ROOT, color)
+    color = "white"
+    if len(sys.argv) > 1:
+        with open(sys.argv[1], 'r') as f:
+            matrix = json.load(f)
+    else:
+        matrix = None
+
+
+    APP = Application(ROOT, color, matrix)
 
     BUTTON1 = tkinter.Button(ROOT, text="finish", command=APP.stop_drawing)
     BUTTON1.configure(width=10, activebackground="#33B5E5")
